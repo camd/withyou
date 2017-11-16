@@ -1,0 +1,32 @@
+{
+  "name": "withyou",
+  "description": "With You Contact Manager",
+  "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/camd/withyou.git"
+  },
+  "license": "MPL-2.0",
+  "engines": {
+    "node": "8.9.0"
+  },
+  "dependencies": {
+    "bootstrap": "4.0.0-beta.2",
+    "create-react-app": "^1.4.3",
+    "font-awesome": "4.7.0",
+    "neutrino": "^7.3.2",
+    "neutrino-lint-base": "^4.3.1",
+    "neutrino-preset-react": "^7.3.2",
+    "popper": "^1.0.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-scripts": "1.0.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "neutrino start",
+    "build": "neutrino build"
+  }
+}

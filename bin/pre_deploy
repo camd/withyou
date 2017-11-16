@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo "-----> PRE-DEPLOY: Running Django system checks..."
+./manage.py check --deploy --fail-level WARNING
+
+echo "-----> PRE-DEPLOY: Running Django migration..."
+./manage.py migrate --noinput
