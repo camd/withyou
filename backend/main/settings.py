@@ -28,7 +28,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = env("DJANGO_SECRET_KEY", 'jcgp-c@4l41asy&anr(nx5_za@oid5&!aufk10_ml1r_a&g!+b')
+SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
