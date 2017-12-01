@@ -15,6 +15,17 @@ function test(store, { thing }) {
     });
 }
 
+async function fetchClients() {
+  const resp = await fetch("http://localhost:8000/clients/");
+  const clients = await resp.json();
+  store.dispatch({
+    type: clientStore.types.RENDER_CLIENTS,
+    payload: {
+      clients
+    }
+  })
+}
+
 const testDataMiddleware = store => next => (action) => {
   if (!action.meta) {
     return next(action);
@@ -26,6 +37,10 @@ const testDataMiddleware = store => next => (action) => {
   switch (action.type) {
     case clientStore.types.TEST:
       test(store, { ...action.meta });
+      return next(consumed);
+
+    case clientStore.types.FETCH_CLIENTS:
+      fetchClients(store, { ...action.meta });
       return next(consumed);
     default:
       break;

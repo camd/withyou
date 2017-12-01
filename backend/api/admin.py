@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import Appointment, Binder, Client, Payment, Partner
 
-# Register your models here.
+admin.site.register(Client)
+admin.site.register(Payment)
+admin.site.register(Partner)
+admin.site.register(Appointment)
+admin.site.register(Binder)
+

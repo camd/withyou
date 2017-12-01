@@ -6,6 +6,12 @@ export const types = {
   TEST: 'TEST',
 };
 export const actions = {
+  fetchClients: () => ({
+    type: types.FETCH_CLIENTS,
+    meta: {
+      type: "fetchClients",
+    }
+  }),
   test: (thing) => ({
     type: types.TEST,
     meta: {
@@ -15,7 +21,8 @@ export const actions = {
   }),
 };
 const initialState = {
-  clients: [{first_name: "Heather"}, {first_name: "Bryttany"}],
+  // clients: [{first_name: "Heather"}, {first_name: "Bryttany"}],
+  clients: [],
 };
 export const reducer = (state = initialState, action) => {
   switch (action.type) {

@@ -24,6 +24,8 @@ class Client(models.Model):
     status = models.CharField(max_length=20, choices=CLIENT_STATUS_CHOICES, default=PROSPECTIVE)
     due_date = models.DateField(null=True)
     has_binder = models.BooleanField(default=False)
+    email = models.CharField(max_length=50, null=True)
+    phone = models.CharField(max_length=14, null=True)
 
 
     def __str__(self):

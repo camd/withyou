@@ -5,6 +5,9 @@ import { store, actions } from './redux/store';
 const mapStateToProps = ({clients}) => clients;
 
 export class ClientList extends Component {
+    componentDidMount() {
+        store.dispatch(actions.clients.fetchClients());
+    }
 
     render() {
         return (
